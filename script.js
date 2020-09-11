@@ -1,30 +1,111 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
-
 // Character arrays
-var upperArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+var upperArr = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
 
-var lowerArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+var lowerArr = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
 
-var numArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",]
+var numArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-var specialArr = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"]
-
+var specialArr = [
+  "!",
+  "#",
+  "$",
+  "%",
+  "&",
+  "'",
+  "(",
+  ")",
+  "*",
+  "+",
+  ",",
+  "-",
+  ".",
+  "/",
+  ":",
+  ";",
+  "<",
+  "=",
+  ">",
+  "?",
+  "@",
+  "[",
+  "\\",
+  "]",
+  "^",
+  "_",
+  "`",
+  "{",
+  "|",
+  "}",
+  "~",
+];
 
 function generatePassword() {
   var pCharacter = prompt("How many characters do you want?");
@@ -37,7 +118,6 @@ function generatePassword() {
   }
   // if statements for the user to choose their passwords characters
   if (pCharacter > 7 && pCharacter < 129) {
-
     var upper = confirm("Do you want uppercase letters?");
     if (upper === true) {
       emptyArr.push(...upperArr);
@@ -56,7 +136,7 @@ function generatePassword() {
       console.log(emptyArr);
     }
 
-    var specChar = confirm("Do you want special characters?")
+    var specChar = confirm("Do you want special characters?");
     if (specChar === true) {
       emptyArr.push(...specialArr);
       console.log(emptyArr);
@@ -67,7 +147,6 @@ function generatePassword() {
     for (var p = 0; p < pCharacter; p++) {
       password.push(emptyArr[Math.floor(Math.random() * emptyArr.length)]);
     }
-   console.log
-   return password.join("")
+    return password.join("");
   }
 }
