@@ -118,26 +118,34 @@ function generatePassword() {
   }
   // if statements for the user to choose their passwords characters
   if (pCharacter > 7 && pCharacter < 129) {
-    // uppercase array if statement
+
     var upper = confirm("Do you want uppercase letters?");
+
+    // uppercase array if statement
     if (upper === true) {
       emptyArr.push(...upperArr);
       console.log(emptyArr);
     }
-    // lowercase array if statement
+    
     var lower = confirm("Do you want lowercase letters?");
+
+    // lowercase array if statement
     if (lower === true) {
       emptyArr.push(...lowerArr);
       console.log(emptyArr);
     }
-    // number array if statement
+    
     var num = confirm("Do you want numbers?");
+
+    // number array if statement
     if (num === true) {
       emptyArr.push(...numArr);
       console.log(emptyArr);
     }
-    // special character array if statement
+    
     var specChar = confirm("Do you want special characters?");
+
+    // special character array if statement
     if (specChar === true) {
       emptyArr.push(...specialArr);
       console.log(emptyArr);
