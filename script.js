@@ -106,7 +106,7 @@ var specialArr = [
   "}",
   "~",
 ];
-
+// Password generation function
 function generatePassword() {
   var pCharacter = prompt("How many characters do you want?");
   // empty array
@@ -118,24 +118,25 @@ function generatePassword() {
   }
   // if statements for the user to choose their passwords characters
   if (pCharacter > 7 && pCharacter < 129) {
+    // uppercase array if statement
     var upper = confirm("Do you want uppercase letters?");
     if (upper === true) {
       emptyArr.push(...upperArr);
       console.log(emptyArr);
     }
-
+    // lowercase array if statement
     var lower = confirm("Do you want lowercase letters?");
     if (lower === true) {
       emptyArr.push(...lowerArr);
       console.log(emptyArr);
     }
-
+    // number array if statement
     var num = confirm("Do you want numbers?");
     if (num === true) {
       emptyArr.push(...numArr);
       console.log(emptyArr);
     }
-
+    // special character array if statement
     var specChar = confirm("Do you want special characters?");
     if (specChar === true) {
       emptyArr.push(...specialArr);
@@ -143,10 +144,11 @@ function generatePassword() {
     }
     // empty password array
     var password = [];
-
+    // for loop for random number selection
     for (var p = 0; p < pCharacter; p++) {
       password.push(emptyArr[Math.floor(Math.random() * emptyArr.length)]);
     }
+    // return statement to end function execution and return to caller
     return password.join("");
   }
 }
