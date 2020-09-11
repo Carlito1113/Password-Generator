@@ -39,35 +39,35 @@ function generatePassword() {
   if (pCharacter > 7 && pCharacter < 129) {
 
     var upper = confirm("Do you want uppercase letters?");
-    if (upper) {
+    if (upper === true) {
       emptyArr.push(...upperArr);
       console.log(emptyArr);
     }
 
     var lower = confirm("Do you want lowercase letters?");
-    if (lower) {
+    if (lower === true) {
       emptyArr.push(...lowerArr);
       console.log(emptyArr);
     }
 
     var num = confirm("Do you want numbers?");
-    if (num) {
+    if (num === true) {
       emptyArr.push(...numArr);
       console.log(emptyArr);
     }
 
     var specChar = confirm("Do you want special characters?")
-    if (specChar) {
+    if (specChar === true) {
       emptyArr.push(...specialArr);
       console.log(emptyArr);
     }
+    // empty password array
+    var password = [];
 
     for (var p = 0; p < pCharacter; p++) {
       password.push(emptyArr[Math.floor(Math.random() * emptyArr.length)]);
     }
-    // empty password array
-   var password = [];
-
+   console.log
+   return password.join("")
   }
 }
-
