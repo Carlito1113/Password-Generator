@@ -31,7 +31,7 @@ function generatePassword() {
   // empty array
   var emptyArr = [];
   // loop which re-prompts user if character condition is not met
-  while (pCharacter < 7 || pCharacter > 128) {
+  while (pCharacter < 8 || pCharacter > 128) {
     alert("Password must be between 8 and 128 characters.");
     var pCharacter = prompt("How many characters do you want?");
   }
